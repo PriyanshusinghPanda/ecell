@@ -59,7 +59,11 @@ def admin_required(f):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('indexq.html')
+
+# @app.route('/test_index')
+# def index_test():
+#     return render_template('indexq.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Register page</title>
@@ -39,5 +39,44 @@
   
 </div>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | E-Cell NST</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login_registration.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="form-panel">
+      <div class="form-content">
+        <h1>Join Us</h1>
+        <p class="subtitle">Create an account to begin your journey</p>
+        <form action="{{ url_for('register') }}" method="POST">
+          <div class="input-field">
+            <i class="input-icon fas fa-user"></i>
+            <input type="text" placeholder="Full Name" name="name" required>
+          </div>
+          <div class="input-field">
+            <i class="input-icon fas fa-envelope"></i>
+            <input type="email" placeholder="Email" name="email" required>
+          </div>
+          <div class="input-field">
+            <i class="input-icon fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <div class="toggle-option">
+          Already have an account? <a href="{{ url_for('login') }}">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
